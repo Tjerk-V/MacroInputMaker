@@ -1,0 +1,32 @@
+﻿<Window x:Class="AutoClicker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoClicker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="528" Width="472" MaxHeight="528" MaxWidth="472" MinHeight="528" MinWidth="472">
+    <Grid Margin="0,0,0,1">
+        <ListBox x:Name="keyControlsListBox" HorizontalAlignment="Left" Width="276" Margin="10,10,0,37" SelectionMode="Multiple"/>
+        <Button Content="Add/Insert" HorizontalAlignment="Left" Height="24" Margin="298,10,0,0" VerticalAlignment="Top" Width="85" Click="Add_Click"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Height="23" Margin="298,39,0,0" VerticalAlignment="Top" Width="85" Click="Remove_Click"/>
+        <CheckBox x:Name="autoKeyUpCheck" Content="Auto key up" HorizontalAlignment="Left" Margin="297,123,0,0" VerticalAlignment="Top" ToolTip="Auto copys a key with the press key checked"/>
+        <CheckBox x:Name="loopUpCheck" Content="Key up at loop end" HorizontalAlignment="Left" Margin="297,143,0,0" VerticalAlignment="Top" ToolTip="All keys are released at the end of a loop"/>
+        <Button Content="Copy" HorizontalAlignment="Left" Height="23" Margin="298,67,0,0" VerticalAlignment="Top" Width="85" Click="Copy_Click" />
+        <Button x:Name="startStopButton" Content="Start(F6)" HorizontalAlignment="Left" Height="23" Margin="296,0,0,37" VerticalAlignment="Bottom" Width="85" Click="StartStop_Click" />
+        <Label Content="Loop For" HorizontalAlignment="Left" Margin="298,0,0,14" Padding="0,0,0,0" Height="18" VerticalAlignment="Bottom"/>
+        <TextBox x:Name="loopAmount" HorizontalAlignment="Left" Margin="350,0,0,14" TextWrapping="Wrap" Text="0" Width="32" TextAlignment="Center" Height="18" VerticalAlignment="Bottom" PreviewTextInput="PreviewTextInput" MaxLength="4"/>
+        <CheckBox x:Name="endlessCheck" Content="Endless" HorizontalAlignment="Left" Margin="387,0,0,14" Height="18" VerticalAlignment="Bottom"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Height="23" Margin="298,95,0,0" VerticalAlignment="Top" Width="85" Click="Clear_Click" />
+        <ListBox x:Name="savesListBox" HorizontalAlignment="Left" Width="120" Margin="298,163,0,0" Height="157" VerticalAlignment="Top" SelectionChanged="SavesListBox_SelectionChanged"/>
+        <TextBox x:Name="saveTextBox" HorizontalAlignment="Left" Margin="298,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" MaxLines="1"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="298,345,0,0" VerticalAlignment="Top" Width="60" Click="Save_Click"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="358,345,0,0" VerticalAlignment="Top" Width="60" Click="Load_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="298,367,0,0" VerticalAlignment="Top" Width="120" Click="Delete_Click"/>
+        <Button Content="Listen" HorizontalAlignment="Left" Height="22" Margin="202,481,0,0" VerticalAlignment="Top" Width="84"  />
+        <CheckBox x:Name="staticTimeCheck" Content="Static time
+                  " HorizontalAlignment="Left" Margin="117,0,0,10" Height="18" VerticalAlignment="Bottom" Width="80"/>
+        <TextBox x:Name="staticTime" HorizontalAlignment="Left" Margin="72,0,0,10" TextWrapping="Wrap" Text="0" Width="40" TextAlignment="Center" Height="18" VerticalAlignment="Bottom" PreviewTextInput="PreviewTextInput" MaxLength="5"/>
+
+    </Grid>
+</Window>
